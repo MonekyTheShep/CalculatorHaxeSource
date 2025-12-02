@@ -69,8 +69,8 @@ class PlayState extends FlxState
 					{
 						var parser = new hscript.Parser();
 						var expr = parser.parseString(inputField.text);
-						var output:Dynamic = interp.execute(expr);
-						inputField.text = Std.string(cast(output, Int));
+						var output:Float = interp.execute(expr);
+						inputField.text = Std.string(output);
 					}
 					catch (e:Dynamic)
 					{
